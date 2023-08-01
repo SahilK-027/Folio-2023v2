@@ -1,25 +1,28 @@
 import * as THREE from "three";
+import { useState } from "react"; // Import useState
 import { Canvas } from "@react-three/fiber";
-import { Environment} from "@react-three/drei";
+import { Environment } from "@react-three/drei";
 import { EffectComposer, N8AO } from "@react-three/postprocessing";
-import { Physics} from "@react-three/rapier";
+import { Physics } from "@react-three/rapier";
 import { Leva, useControls } from "leva";
 import { Bubble } from "./components/Sphere";
 import { HelloWorld } from "./components/HelloWorld";
 import { Pointer } from "./components/Pointer";
 
+
 THREE.ColorManagement.legacyMode = false;
 const spheres = [...Array(45)].map(() => ({ scale: [0.75, 0.75, 1, 1, 1.25][Math.floor(Math.random() * 5)] }));
 
 export const App = () => {
-  const { aoColor, directionalLightColor, spotLightColor, bgColor } = useControls(
-    {
-      aoColor: "#8764ef",
-      directionalLightColor: "#9687ff",
-      spotLightColor: "#afaffc",
-      bgColor: "#d5c6ff"
-    },
-  );
+  // Step 1: Create a state variable for the geometry type
+  const [geometryType, setGeometryType] = useState("Sphere");
+
+  const { aoColor, directionalLightColor, spotLightColor, bgColor } = useControls({
+    aoColor: "#5b41aa",
+    directionalLightColor: "#9687ff",
+    spotLightColor: "#2e2155",
+    bgColor: "#d5c6ff",
+  });
 
   return (
     <>
@@ -38,11 +41,13 @@ export const App = () => {
         <Physics colliders gravity={[0, 0, 0]}>
           <Pointer />
           {spheres.map((props, i) => (
-            <Bubble key={i} {...props} />
+            // Step 2: Pass the geometry type and update function as props
+            <Bubble key={i} {...props} geometryType={geometryType} setGeometryType={setGeometryType} />
           ))}
-          <Physics>
+          <Physics gravity={[0, 0, 0]}>
             <HelloWorld />
           </Physics>
+
         </Physics>
         <Environment files="/adamsbridge.hdr" />
         <EffectComposer disableNormalPass multisampling={0}>
