@@ -43,3 +43,22 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 890px) {
+  #heading{
+    font-size: 40px !important;
+    line-height: 40px !important;
+  }
+  .full{
+    flex: 15 1 0% !important;
+  }
+  #sk{
+    font-size: 150px !important;
+  }
+  #num{
+    font-size: 150px !important;
+  }
+  #text{
+    display: none;
+  }
+}

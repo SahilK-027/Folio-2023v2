@@ -43,6 +43,7 @@ const Overlay = () => {
                     justifyContent: "center"
                 }}>
                 <p
+                id="heading"
                     style={{
                         fontFamily: "'Antonio', sans-serif",
                         flex: "1 1 0%",
@@ -56,7 +57,7 @@ const Overlay = () => {
                     SAHIL KANDHARE
                 </p>
                 <div style={{ flex: "1 1 0%", display: "flex", gap: "2em" }}></div>
-                <p style={{ flex: "1 1 0%", height: 30, fontSize: 20, lineHeight: "30px", textAlign: "right", color: "black" }}>Welcome ツ !</p>
+                <p style={{ flex: "1 1 0%", height: 30, fontSize: 20, lineHeight: "30px", textAlign: "right", color: "black" }}> Hi ツ</p>
             </div>
             <div style={{ height: 60 }} />
             <div style={{ width: "100%", padding: 0, display: "inline-flex", flexDirection: "row", alignItems: "flex-start", justifyContent: "center" }}>
@@ -104,9 +105,9 @@ const Overlay = () => {
                     alignItems: "flex-end",
                     justifyContent: "center",
                 }}>
-                <p style={{ flex: "1 1 0%", fontSize: 250, lineHeight: "1em", color: "black", margin: 0, letterSpacing: -10 }}>SK</p>
+                <p id="sk" style={{ flex: "1 1 0%", fontSize: 250, lineHeight: "1em", color: "black", margin: 0, letterSpacing: -10 }}>SK</p>
                 <div style={{ width: 10 }} />
-                <p style={{ flex: "1 1 0%", fontSize: 250, lineHeight: "100%", textAlign: "right", color: "black", margin: 0, letterSpacing: -10 }}>_027</p>
+                <p  id="num" style={{ flex: "1 1 0%", fontSize: 250, lineHeight: "100%", textAlign: "right", color: "black", margin: 0, letterSpacing: -10 }}>_027</p>
             </div>
             <div style={{ height: 60 }} />
 
@@ -129,7 +130,7 @@ const Overlay = () => {
                 </p>
                 <div style={{ width: 10 }} />
                 <p
-                    className="full"
+                    id="text"
                     style={{
                         fontFamily: "'Antonio', sans-serif",
                         flex: "1 1 0%",
