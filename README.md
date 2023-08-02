@@ -5,7 +5,7 @@ See the deployed version here: [Live](https://sk027v2.vercel.app/)
 
 ## Setup
 
-Download Node.js. Run this followed commands:
+Download Node.js. Run the following commands:
 
 ```bash
 # Install dependencies (only the first time)
@@ -20,3 +20,7 @@ npm run build
 ## Credits
 - [Vite Bundler](https://vitejs.dev/)
 - [R3F](https://github.com/pmndrs/react-three-fiber)
+
+
+> __Note__  
+> Browsers have better performance than mobile devices
