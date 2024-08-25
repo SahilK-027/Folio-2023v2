@@ -1,4 +1,5 @@
-# Folio-2k23V2
+# Small Weekend Project
+<img width="1440" alt="img" src="https://github.com/user-attachments/assets/9471e391-3ee1-4a44-82a0-98c048805731">
 
 ## Visit
 See the deployed version here: [Live](https://sk027v2.vercel.app/)
